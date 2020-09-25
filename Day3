@@ -1,0 +1,24 @@
+//형변환 
+
+byte < short < int < long < float < double
+
+long no = 99l;
+int num = (int)no;
+long no = 5;
+int num = ___ 99l; // 오류발생!, (int)를 넣어야한다.
+
+
+
+
+long no = 6;
+int num = 99l;
+double z = 12.414;
+float z1 = 12.414f;
+
+
+byte a = 10;
+char b =(char) a; // 음수표현을 char이 못함.
+short c = (short) b ; // 동일
+
+public static final double PI= 3.141592;  // 상수는 대문자 표현.
+ 
