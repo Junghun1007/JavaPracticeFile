@@ -10,3 +10,7 @@ public class HelloJava {
 }
 class A{}
 class B{}
+/*  A = 65
+    0 = 48
+    a = 97
+    */
