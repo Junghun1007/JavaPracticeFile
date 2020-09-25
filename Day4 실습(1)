@@ -1,0 +1,36 @@
+
+public class Exam_01 {
+				public static void main(String args[]) {
+					
+				/*	
+					byte a = 10; // 1byte  -128 ~ 127
+										// byte b =200; 오류 발생
+					
+					short b = 10000; // 2byte -2^15 ~ 2^15-1
+					int c = 420000; // 4byte -2^31 ~ 2^32-1, 기본자료형
+					long d = 1000l; // 8byte  -2^63~ 2^63-1  , 두번 작업해야하므로 l을 붙힌다.
+					char e = 'A' ; // 2byte 0~2^16-1
+					float f = 10.23f; // 4byte
+					double g = 10.23; //8byte , 기본자료형
+					boolean h =true; //1byte true,false
+					String i = "자바공부"; //문자열 자료형
+					
+					
+				 */					
+					
+					
+					
+				/*
+				  byte a = 10; 
+				  int b = a; 
+				  byte c = (byte) b ;  // 큰  -> 작
+				 */
+					
+					byte a = 10;
+					char b = (char)a; // 작 -> 큰   맞지만 범위가 달라서
+					short  c = (short)b;  // 큰  -> 작
+					char d = (char)c; // 범위가 달라서 
+					
+					
+				}
+}
