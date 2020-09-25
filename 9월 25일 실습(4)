@@ -1,0 +1,15 @@
+package ch02;
+import java.io.*;
+
+public class Exam_03 {
+				public static void main(String args[])throws IOException{
+					
+					System.out.print("수를 입력하세요 :");
+					int x = System.in.read() - 48; // 0의 아스키코드값 , 한글자일때만!
+					
+					int result = x * x;
+					System.out.printf("%d의 제곱값은 %d입니다.\n",x,result);
+			
+					
+				}
+}
