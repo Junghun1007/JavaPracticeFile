@@ -115,3 +115,36 @@
 			}
 		else
 			System.out.println("F 입니다. ");
+			
+			
+//예제(5)-1 swith문으로 푸는법
+
+
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("국어 점수를 입력하세요 : ");
+			
+			int n = sc.nextInt();
+			
+			switch (n/10) {
+				case 10 : 
+				System.out.print("A 입니다.");
+				break;
+				case 9 : 
+					System.out.print("A 입니다.");
+					break;
+				case 8 :
+					System.out.print("B 입니다.");
+					break;
+				case 7 :
+					System.out.print("C 입니다.");
+					break;
+				case 6 :
+					System.out.print("D 입니다.");
+					break;
+				default :
+					System.out.print("F 입니다.");
+					break;
+				}
+
+
