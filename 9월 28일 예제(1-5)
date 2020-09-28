@@ -145,6 +145,6 @@
 				default :
 					System.out.print("F 입니다.");
 					break;
-				}
+				 }
 
 
