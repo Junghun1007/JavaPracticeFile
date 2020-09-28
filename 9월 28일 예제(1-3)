@@ -1,0 +1,59 @@
+// 예제 (1) : 수를 입력받아 그 합을 구하는 프로그램
+
+  Scanner sc = new Scanner(System.in);
+		System.out.printf("아무 수를 입력하세요. : " );
+		int n = sc.nextInt(), 
+			sum=0, i=1 ;
+		
+		while(n>=i){
+			sum+=i;
+			i++;
+				}
+		System.out.printf("수의 합은 %d입니다." , sum);
+
+// 예제 (2) : 국어점수를 입력받아 값이 0 ~ 100 사이의 값이 아니라면 계속해서 입력받는 프로그램
+
+	Scanner sc = new Scanner(System.in);
+		
+		int kor; // 지역변수***** 
+		do {
+			System.out.print("국어점수를 입력하세요. : ");
+			
+			kor = sc.nextInt();
+			
+			}while(kor> 100 || kor < 0);
+
+// 예제 (3) : 임의의 수를 입력받아 그 합과 평균을 구하는 프로그램
+      
+      Scanner sc = new Scanner(System.in);
+		
+		int q, sum=0, i=1,avg;
+		
+		do{
+			System.out.print("수를 입력하세요 : ");
+			q = sc.nextInt();
+			sum+=q;
+			avg = sum/i;
+			System.out.printf("합은 %d, 평균은 %d\n", sum, avg);
+			i++;
+		}while(q > 0);
+  
+// 예제 (3)-1 : 오답 수정
+
+	Scanner sc = new Scanner(System.in);
+		
+		int sum =0;
+		int count = 0;
+	
+		while(true) {
+			System.out.print("임의의 수를 입력 : ");
+			int su = sc.nextInt();
+			if(su<=0)
+				break;
+			sum += su;
+			count++;	
+			}
+				System.out.printf("입력하신 횟수 : %d, 총합 : %d, 평균 : %6.2f\n", count,sum,sum/(float)count);
+		}
+
+				
