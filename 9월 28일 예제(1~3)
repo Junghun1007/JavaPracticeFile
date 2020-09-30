@@ -54,6 +54,6 @@
 			count++;	
 			}
 				System.out.printf("입력하신 횟수 : %d, 총합 : %d, 평균 : %6.2f\n", count,sum,sum/(float)count);
-		}
+		 }
 
 				
