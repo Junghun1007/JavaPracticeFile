@@ -89,7 +89,7 @@
 			}
 			else if (n%5 == 0) {
 					System.out.print("5의배수입니다. ");
-					}
+				 	}
 			else
 				System.out.print("이 수와는 관련이 없습니다.");
         
