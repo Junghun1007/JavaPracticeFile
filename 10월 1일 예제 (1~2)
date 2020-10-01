@@ -1,0 +1,51 @@
+// 랜덤 함수 이용 하여 숫자 맞추기
+			Scanner sc= new Scanner(System.in);
+			
+			int n = (int)(Math.random()*100)+1;
+
+			
+			for(int i=0; i< n;i++) {
+				System.out.print("1~100사이의 수를 선택 : ");
+				int a = sc.nextInt();
+				if(n == a) {
+					System.out.printf("%d번만에 맞추셨습니다.", i+1);
+					break;
+					}
+				else if( n > a )
+						System.out.println("UP");
+					else
+						System.out.println("DOWN");
+				
+			
+				}
+				
+// 로또 6개 추첨 프로그램 (1~45)
+	Scanner sc= new Scanner(System.in);
+			
+			int[] rot = new int[6];
+			int[] a = new int[6];
+			int n=0;
+			
+			for(int i =0 ; i<6;i++) {
+				rot[i] = (int)(Math.random()*45)+1;
+				System.out.printf("%d번째 숫자 입력 : ",i+1);
+				a[i] = sc.nextInt();
+				
+			}
+
+		for(int k = 0;k<6;k++) {
+			for (int j = 0; j<6;j++) {
+				if(rot[k] == a[j]) 
+					n++;
+											
+			}	
+			System.out.printf("%d  ",rot[k]);
+		}	  
+		
+		
+		if(n == 6)
+			System.out.printf("6개 맞추셨습니다. 축하드려요");
+		else
+			System.out.printf("%d개 맞추셨습니다.", n);
+		
+    
