@@ -25,7 +25,7 @@
 
 
 
-// 연산자에 따른 결과 값 산출하기 ( 조건 3개 )
+// 연산자에 따른 결과 값 산출하기 ( 내가푼것 ) ( 조건 3개 )
 public static void main(String args[])throws IOException{
 
 		Scanner sc = new Scanner(System.in);
@@ -64,4 +64,8 @@ public static void main(String args[])throws IOException{
 					}
 			
 				}
+
+// 연산자에 따른 결과 값 산출하기 ( 정답 ) ( 조건 3개 )
+
+
 		
