@@ -1,0 +1,67 @@
+// 입력받은값의 합 출력
+
+
+	public static void main(String args[])throws IOException{
+		
+			int su1 = input();
+			int su2 = input();
+			int sum = plus(su1,su2);
+			output(sum);
+		}
+		public static int input(){
+			Scanner sc = new Scanner(System.in);
+			int a = sc.nextInt();
+			return a;
+			
+		}
+		public static int plus(int x,int y) {
+			int n =x + y;
+			return n;
+		}
+		public static void output(int a) {
+			System.out.print(a);
+		}
+}
+
+
+
+// 연산자에 따른 결과 값 산출하기 ( 조건 3개 )
+public static void main(String args[])throws IOException{
+
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		String z = sc.next();
+		
+		tool(x,y,z);
+		
+		}
+
+		public static void tool(int a, int b, String c) {
+			switch(c) {
+			case "+":	
+				System.out.printf("%d 입니다.", a + b);
+				break;
+			case "-": 
+				if(a > b) {                           // 연산자가 뺄셈이면 큰수에서 작은수를 빼기
+					System.out.printf("%d 입니다.", a - b);
+				}
+				else {
+					System.out.printf("%d 입니다.", b - a);
+				}
+				break;
+      case "*":
+				System.out.printf("%d 입니다.", a * b);
+				break;
+			case "/":
+				if(b == 0) {                        // 두번째 수가 0이면 1로 고쳐 나누기
+					b = 1;
+					}
+				else
+					System.out.printf("%d 입니다.", a / b);
+				break;
+					}
+			
+				}
+		
