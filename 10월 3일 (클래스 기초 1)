@@ -1,0 +1,94 @@
+// 방 관리 프로그램 
+
+package ch02;
+import java.util.*;
+import java.io.*;
+class Room{
+	boolean room[];
+	Scanner sc;
+	int rsu;
+	Room()throws IOException{
+		sc = new Scanner(System.in);
+		System.out.print("방의 갯수를 입력 : ");
+		rsu = sc.nextInt();
+		room = new boolean[rsu];
+		start();
+	}
+	public void start() throws IOException{
+		while(true) {
+			System.out.print("1. 입실 2. 퇴실 3. 방보기 4. 종료 : ");
+			int select = System.in.read() - 48; // 1, \r, \n
+			sc.nextLine();				// 엔터키가 들어올때 까지 입력을 받는다.
+			switch(select) {
+			case 1: 
+				input(); break;
+			case 2:
+				output(); break;
+			case 3:
+				view(); break;
+			case 4:
+				exit(); break;
+				default:
+					System.out.println("잘못입력하셨습니다.");
+					
+			}
+		}
+	}
+	Room(int rsu){				//방수 설정	
+		room = new boolean[rsu];
+		sc = new Scanner(System.in);
+		this.rsu = rsu;
+	}
+	public void input() {
+		int roomNumber;
+		do {
+			System.out.println("입실하실 방의 번호 : ");
+			roomNumber = sc.nextInt();
+		}while(roomNumber<1 || roomNumber > rsu);
+		
+		if(room[roomNumber-1]) {                // boolean 값이기 때문에
+			System.out.println(roomNumber + "호실은 사용중입니다.");
+		}else {
+			System.out.println(roomNumber + "호실에 입실하셨습니다.");
+			room[roomNumber-1] =true;
+		}
+		// if(roomNumber<1 || roomNumber > rsu); input();
+	}
+	public void output() {
+		int roomNumber;
+		do {
+			System.out.println("퇴실하실 방의 번호 : ");
+			roomNumber = sc.nextInt();
+		}while(roomNumber<1 || roomNumber > rsu);
+		
+		if(room[roomNumber-1]) {                // boolean 값이기 때문에
+			System.out.println(roomNumber + "호실은 빈방입니다.");
+		}else {
+			System.out.println(roomNumber + "호실에서 퇴실하셨습니다.");
+			room[roomNumber-1] = false;
+		}
+		
+	}
+	public void view() {
+		for(int i = 0;i<rsu; ++i) {
+			if(room[i]) {
+				System.out.println(i+1+"호실은 사용중입니다.");
+			}
+			else
+				System.out.println(i+1+"호실은 빈방 입니다.");
+		}
+	}
+	public void exit() {
+	System.out.print("프로그램을 종료합니다." );
+	}
+	
+}
+public class Exam_01 {
+	public static void main(String args[]) throws IOException{
+		
+		Scanner sc= new Scanner(System.in);
+		Room room = new Room();
+		
+		
+	}
+}
