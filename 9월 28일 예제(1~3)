@@ -49,7 +49,7 @@
 			System.out.print("임의의 수를 입력 : ");
 			int su = sc.nextInt();
 			if(su<=0)
-				break;
+		 		break;
 			sum += su;
 			count++;	
 			}
