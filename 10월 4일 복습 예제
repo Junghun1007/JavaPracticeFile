@@ -1,0 +1,59 @@
+// 연산자 계산기 프로그램
+
+
+// 조건 1. - 결과에서 값이 음수이면 절대값으로 출력하시오.
+// 조건 2.  / 결과에서 두번째 수가 0이면 1로 고쳐 출력하시오.
+// 조건 3. 입력값이 범위에서 벗어나면 다시 입력하게 하시오.
+
+
+
+package ch02;
+import java.util.Scanner;
+import java.io.*;
+
+public class Exam_03 {
+	
+	public static int plus(int a, int b) {
+		return a + b;
+	}
+	public static int min(int a, int b) {
+		if(b>a) return  b - a;
+		return a - b;
+	}
+	public static int div(int a, int b) {
+	if(b == 0) {b = 1; return a / b;}
+	return a / b;
+	}
+	public static int mul(int a, int b) {
+	return a * b;
+	}
+	public static void setNum() throws IOException{
+		Scanner sc = new Scanner(System.in);
+		int a, b;
+		do {
+			System.out.print("첫번재 숫자를 입력하세요 : ");
+			 a = sc.nextInt();
+			 System.out.print("두번재 숫자를 입력하세요 : ");
+			 b = sc.nextInt();
+			 char op = (char)System.in.read();
+			 setOp(a, b, op);
+		}while(a < 0 || b < 0);
+
+	}
+	public static void setOp(int a, int b, char op) {
+		int result = 0;
+		switch(op) {
+		case '+' : result = plus(a,b);break;
+		case '-' :result = min(a,b);break;
+		case '/' :result = div(a,b);break;
+		case '*' :result = mul(a,b);break;
+			
+		}
+		System.out.print(result + "입니다.");
+	}
+
+	public static void main(String args[])throws IOException{
+		setNum();
+	}
+	
+}
