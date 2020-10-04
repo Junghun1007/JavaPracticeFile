@@ -7,7 +7,7 @@ public class Exam_04 {
 					
 				System.out.print("첫 번째 수를 입력하세요 :" );
 				int x = System.in.read()-48;
-				
+// ---------------------------------------------------------------------------- 중요 !
 				System.in.read(); // \r
 				System.in.read(); // \n
 				
