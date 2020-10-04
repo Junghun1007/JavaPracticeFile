@@ -51,7 +51,7 @@ public static void main(String args[])throws IOException{
 					System.out.printf("%d 입니다.", b - a);
 				}
 				break;
-      case "*":
+      			case "*":
 				System.out.printf("%d 입니다.", a * b);
 				break;
 			case "/":
