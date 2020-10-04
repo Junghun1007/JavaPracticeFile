@@ -81,7 +81,7 @@ public static void main(String args[])throws IOException{
 			break;
 		case '/':
 			result = div(a,b);
-			break;
+			break; 
 		case '*':
 			result = mul(a,b);
 			break;
