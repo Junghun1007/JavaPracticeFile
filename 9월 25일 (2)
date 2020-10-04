@@ -19,6 +19,6 @@ float z1 = 12.414f;
 byte a = 10;
 char b =(char) a; // 음수표현을 char이 못함.
 short c = (short) b ; // 동일
-
+ 
 public static final double PI= 3.141592;  // 상수는 대문자 표현.
  
