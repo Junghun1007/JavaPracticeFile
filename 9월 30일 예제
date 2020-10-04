@@ -22,7 +22,7 @@ Scanner sc = new Scanner(System.in);
 				}
 				System.out.printf("   %d  ", a[j]);	
 						
-			}
+			} 
 
 
 //
