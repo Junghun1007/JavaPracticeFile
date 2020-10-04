@@ -30,7 +30,7 @@ public class Exam_01 {
 					char b = (char)a; // 작 -> 큰   맞지만 범위가 달라서
 					short  c = (short)b;  // 큰  -> 작
 					char d = (char)c; // 범위가 달라서 
-					
+					 
 					
 				}
 }
