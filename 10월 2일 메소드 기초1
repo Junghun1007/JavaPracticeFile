@@ -85,7 +85,7 @@ public static void main(String args[])throws IOException{
 		case '*':
 			result = mul(a,b);
 			break;
-		default:
+		default: 
 			System.out.print("다시입력하세요.");
 			break;
 			}
