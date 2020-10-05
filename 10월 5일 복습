@@ -1,0 +1,68 @@
+//  방관리 프로그램 
+
+
+package test;
+import java.io.*;
+import java.util.Scanner;
+class Room{
+	Scanner sc = new Scanner(System.in);
+	int roomsu;
+	boolean room[]; //------------------------
+	Room(){
+		
+		System.out.print("방의 개수를 입력하세요 : ");
+		roomsu = sc.nextInt();
+		room = new boolean[roomsu]; //----------------- 중요**
+		for(int i= 0;i<roomsu;i++) {
+			room[i] = false;
+		}
+		Menu();
+	}
+	public int setRoom() {
+		int r = sc.nextInt();
+		return r;
+	}
+	public void Menu() {
+		System.out.println("1. 입실 / 2. 퇴실 / 3. 방보기 / 4. 종료 : ");
+		int n = sc.nextInt();
+		switch(n) {
+		case 1: Input();break;
+		case 2:	Output();break;
+		case 3: View();break;
+		case 4: Exit();break;
+		}
+		
+	}
+	public void Input() {
+		System.out.print("입실하실 방의 번호 입력 : ");
+		int n = sc.nextInt();
+		if(room[n-1]) {System.out.print(n + "호실은 사용중입니다. \n"); Input();}
+		else {System.out.print(n + "호실에 입실하셨습니다.\n"); room[n-1] = true; Menu();}
+	}
+	public void Output() {
+		System.out.print("퇴실하실 방의 번호 입력 : ");
+		int n = sc.nextInt();
+		if(room[n-1]) {System.out.print(n + "호실에서 퇴실하셨습니다.\n");room[n-1] = false; Menu();}
+		else {System.out.print(n + "호실은 빈방입니다.\n"); Output();}
+	}
+	public void View() {
+		for(int i=0; i<roomsu;i++) {
+			if(room[i] == true) {
+				System.out.print((i+1)+"호실은 사용중입니다.\n");
+			}
+			else {
+			 System.out.print((i+1)+"호실은 빈방입니다.\n");
+			}
+		}
+		Menu();
+	}
+	public void Exit() {
+		System.out.print("종료되었습니다. ");
+	}
+	
+}
+public class Exam_02 {
+	public static void main(String args[]) {
+		Room c1 = new Room();
+	}
+}
