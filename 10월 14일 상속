@@ -1,0 +1,95 @@
+package test;
+class SungJuk{ //챕터 6,7 참고하기!!
+	private String name;
+	private int kor, eng,mat;
+	private int tot, rank;
+	//protected in tot;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public boolean setKor(int kor) {
+		if(kor<0|| kor>100) return false;
+		this.kor=kor;
+		return true;
+	}
+	public boolean setEng(int eng) {
+		if(eng<0|| eng>100) return false;
+		this.eng=eng;
+		return true;
+	}
+	public boolean setMat(int mat) {
+		if( mat<0|| mat>100) return false;
+		this.mat= mat;
+		return true;
+	}
+	public void sumTot() {
+		tot = kor + eng + mat;
+	}
+	public int getTot() {
+		return tot;
+		
+	}
+	public void clearRank() {
+		rank=1;
+	}
+	public void plusRank() {
+		rank++;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public int getMat() {
+		return mat;
+	}
+	public int getKor() {
+		return kor;
+	}
+	public int getRank() {
+		return rank;
+	}
+	public void disp() {
+		System.out.print(name+"\t");
+		System.out.print(kor+"\t");
+		System.out.print(eng+"\t");
+		System.out.print(mat+"\t");
+		System.out.print(tot+"\t");
+		System.out.print(rank+"\t");
+		
+	}
+}
+class SungJuk2 extends SungJuk{
+	private int com;
+	private int total;
+	public boolean setCom(int com) {
+		if( com<0|| com>100) return false;
+		this.com = com;
+		return true;
+	}
+	public void sumTotal() {
+		sumTot();
+		total = getTot()+com;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public int getCom() {
+		return com;
+	}
+	
+	public void disp() {
+		System.out.print(getName()+"\t");
+		System.out.print(getKor()+"\t");
+		System.out.print(getEng()+"\t");
+		System.out.print(getMat()+"\t");
+		System.out.print(getCom()+"\t");
+		System.out.print(getTotal()+"\t");
+		System.out.print(getRank()+"\t");
+	}
+}
+public class Exam_05 {
+
+
+}
