@@ -1,0 +1,42 @@
+class Unit{
+	public void attack() {
+		System.out.println("All unit attack");
+	}
+	public void defense() {
+		System.out.println("All unit defense");
+	}
+	
+}
+class Jilot extends Unit{
+	public void attack() {
+		System.out.println("Jilot attack");
+	}
+	public void defense() {
+		System.out.println("Jilot defense");
+	}
+}
+class Dragon extends Unit{
+	public void attack() {
+		System.out.println("Dragon attack");
+	}
+	public void defense() {
+		System.out.println("Dragon defense");
+	}
+}
+class Start{
+	public void run() {
+	Unit ji = new Jilot();
+	Unit dr = new Dragon();
+	
+	ji.attack();
+	dr.attack();
+	ji.defense();
+	dr.defense();
+	}
+}
+public class Test_01 {
+	public static void main(String args[]) {
+		Start s = new Start();
+		s.run();
+	}
+}
