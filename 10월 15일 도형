@@ -1,0 +1,49 @@
+package test;
+class Shape{
+	double result;
+	public double area() {
+		return result;
+	}
+}
+class Triangle extends Shape{
+	double bottom;
+	double height;
+	Triangle(double bottom, double height){
+		this.bottom = bottom;
+		this.height = height;
+	}
+	public double area() {
+		return bottom * height;
+	}
+}
+class Circle extends Shape{
+	static double pi = 3.14;
+	double dia;
+	Circle(double dia){
+		this.dia = dia;
+	}
+	public double area() {
+		return pi * dia;
+	}
+}
+class Rectangle extends Shape{
+	double height;
+	double bottom;
+	Rectangle(double height, double bottom){
+		this.bottom = bottom;
+		this.height = height;
+	}
+	public double area() {
+		return bottom * height * 0.5;
+	}
+}
+public class Test_02 {
+	public static void main(String args[]) {
+		Shape c1 = new Circle(3);
+		Shape r1 = new Rectangle(3.1, 2.4);
+		Shape t1 = new Triangle(5,3.4);
+		System.out.println(c1.area());
+		System.out.println(r1.area());
+		System.out.println(t1.area());
+	}
+}
